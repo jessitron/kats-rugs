@@ -8,13 +8,8 @@ param greeting: @any
 
 let new_body_content = { "Html.div [] [ \"" + greeting + "\"]" }
 
+let main_function_body=$(/src//Elm()/function[/name[@value="main"]]/body)
+
 with Project p
-  with File when path = "src/Main.elm"
-    with Elm e begin
-      do eval { print("here is a thing: " + e.value()) }
-      with function f begin
-        do eval { print("here is a function: " + f.value() )}
-        with body
+  with main_function_body
           do update new_body_content
-      end
-    end
