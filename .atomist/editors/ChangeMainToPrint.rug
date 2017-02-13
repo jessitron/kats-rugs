@@ -1,0 +1,20 @@
+@description "adds a project specific README"
+@tag "readme"
+@tag "documentation"
+editor ChangeMainToPrint
+
+@displayName "greeting"
+param greeting: @any
+
+let new_body_content = { "Html.div [] [ \"" + greeting + "\"]" }
+
+with Project p
+  with File when path = "src/Main.elm"
+    with Elm e begin
+      do eval { print("here is a thing: " + e.value()) }
+      with function f begin
+        do eval { print("here is a function: " + f.value() )}
+        with body
+          do update new_body_content
+      end
+    end
