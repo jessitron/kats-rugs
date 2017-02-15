@@ -1,0 +1,27 @@
+scenario ChangeMainToPrint should put in the greeting
+
+let readme = "README.md"
+let newDescription = "Boy Wizard"
+
+given
+  "src/Main.elm" = """module Main exposing (main)
+
+import Html exposing (Html)
+
+
+main : Html Never
+main =
+    Html.div [] [ Html.text "Hello World" ]
+
+anotherFunction =
+    "This should not change"
+"""
+
+when
+  ChangeMainToPrint greeting="Yo Yo Yo"
+
+then
+  fileExists "src/Main.elm"
+  and dump "src/Main.elm"
+	and fileContains "src/Main.elm" """    Html.div [] [ Html.text "Yo Yo Yo" ]"""
+  and not fileContains "src/Main.elm" "This should not change"
