@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-scenario Hello is added to your project by AddTypeScriptEditor
+scenario UpgradeToBeginnerProgram is added to your project by AddTypeScriptEditor
 
 given
   ArchiveRoot
 
 when
-  Hello
+  UpgradeToBeginnerProgram
 
 then
   fileHasContent "hello.txt" "Hello, World!"
