@@ -6,15 +6,12 @@ let newDescription = "Boy Wizard"
 given
   "src/Main.elm" = """module Main exposing (main)
 
-import Html exposing (Html)
+import Html exposing (Html, div, text)
 
 
 main : Html Never
 main =
-    Html.div [] [ Html.text "Hello World" ]
-
-anotherFunction =
-    "This should not change"
+    div [] [ text "Hello World" ]
 """
 
 when
@@ -23,5 +20,4 @@ when
 then
   fileExists "src/Main.elm"
   and dump "src/Main.elm"
-	and fileContains "src/Main.elm" """    Html.div [] [ Html.text "Yo Yo Yo" ]"""
-  and not fileContains "src/Main.elm" "This should not change"
+	and fileContains "src/Main.elm" """    div [] [ text "Yo Yo Yo" ]"""
