@@ -6,7 +6,7 @@ import { Editor, Parameter, Tags } from '@atomist/rug/operations/Decorators'
 
 @Editor("WrapFunctionBodyTS", "change the type, and wrap the body, of certain functinos")
 @Tags("scala")
-class WrapFunctionBodyTS {
+class WrapFunctionBodyMicrogrammar {
 
     edit(project: Project) {
 
@@ -39,4 +39,4 @@ class WrapFunctionBodyTS {
 
 }
 
-export let wrapFunctionBodyTS = new WrapFunctionBodyTS()
+export let wrapFunctionBodyTS = new WrapFunctionBodyMicrogrammar()
