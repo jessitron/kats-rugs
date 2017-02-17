@@ -1,7 +1,7 @@
 group: "mygroup"
-artifact: "elm-katz-rugs"
+artifact: "elm-kats-rugs"
 version: "0.1.0"
 requires: "0.13.0-SNAPSHOT"
 dependencies:
 extensions:
-  - 'com.jessitron:elm-rug-language-extension:0.1.0'
+  - 'jessitron:friday:0.1.0'
