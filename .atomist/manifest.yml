@@ -1,5 +1,5 @@
-group: "mygroup"
-artifact: "elm-kats-rugs"
+group: "jessitron"
+artifact: "kats-rugs"
 version: "0.1.0"
 requires: "0.13.0-SNAPSHOT"
 dependencies:
