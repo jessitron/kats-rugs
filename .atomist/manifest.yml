@@ -4,4 +4,4 @@ version: "0.1.0"
 requires: "0.13.0-SNAPSHOT"
 dependencies:
 extensions:
-  - 'jessitron:friday:0.1.0'
+  - 'jessitron:kats2:0.1.0'
